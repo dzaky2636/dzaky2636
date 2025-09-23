@@ -2,33 +2,32 @@ name: Generate Snake Animation
 
 on:
   schedule:
-    # Runs every 12 hours
-    - cron: '0 */12 * * *'
-
+    # Runs at 00:00 UTC daily
+    - cron: "0 0 * * *"
   workflow_dispatch:
 
-  push:
-    branches:
-      - output
-
 jobs:
-  generate:
+  build:
     runs-on: ubuntu-latest
-    timeout-minutes: 10
 
     steps:
-      - name: generate contribution snake svg
-        uses: Platane/snk/svg-only@v3
-        with:
-          github_user_name: DzakyFaturRahman
-          outputs: |
-            assets/github-contribution-snake.svg
-            assets/github-contribution-snake-dark.svg?palette=github-dark
+      # Checkout the repo
+      - name: Checkout repo
+        uses: actions/checkout@v3
 
-      - name: push contribution snake to output branch
-        uses: crazy-max/ghaction-github-pages@v2.6.0
+      # Generate the snake files (SVG + GIF + Dark Mode)
+      - name: Generate Snake
+        uses: Platane/snk@v3
         with:
-          target_branch: output
-          build_dir: assets
-        env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          github_user_name: ${{ github.repository_owner }}
+          outputs: |
+            dist/github-snake.svg
+            dist/github-snake-dark.svg?palette=github-dark
+            dist/github-snake.gif?color_snake=orange&color_dots=#bfd6f6,#8dbdff,#64a1f4,#4b91f1,#3c7dd9
+
+      # Commit the files back to the repo
+      - name: Push Snake Files
+        uses: stefanzweifel/git-auto-commit-action@v4
+        with:
+          commit_message: "chore: update snake animation"
+          file_pattern: "dist/*"
