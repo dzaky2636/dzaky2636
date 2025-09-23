@@ -8,6 +8,8 @@
   </picture>
 </div>
 
+<sub>generated with [Platane/snk](https://github.com/Platane/snk)</sub>
+
 <!--
 **dzaky2636/dzaky2636** is a ✨ _special_ ✨ repository because its `README.md` (this file) appears on your GitHub profile.
 
