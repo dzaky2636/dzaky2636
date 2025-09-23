@@ -1,10 +1,12 @@
 ## Hi there 👋
 
-<picture>
-  <source media="(prefers-color-scheme: dark)" srcset="dist/github-snake-dark.svg" />
-  <source media="(prefers-color-scheme: light)" srcset="dist/github-snake.svg" />
-  <img alt="github-snake" src="dist/github-snake.svg" />
-</picture>
+<div align="center">
+  <picture>
+    <source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/dzaky2636/dzaky2636/output/github-contribution-snake-dark.svg" />
+    <source media="(prefers-color-scheme: light)" srcset="https://raw.githubusercontent.com/dzaky2636/dzaky2636/output/github-contribution-snake.svg" />
+    <img alt="GitHub contribution snake animation" src="https://raw.githubusercontent.com/dzaky2636/dzaky2636/output/github-contribution-snake.svg" />
+  </picture>
+</div>
 
 <!--
 **dzaky2636/dzaky2636** is a ✨ _special_ ✨ repository because its `README.md` (this file) appears on your GitHub profile.
