@@ -31,3 +31,7 @@ jobs:
         with:
           commit_message: "chore: update snake animation"
           file_pattern: "dist/*"
+
+          commit_user_name: "Snake Bot"
+          commit_user_email: "snake-bot@noreply.com"
+          commit_author: "Snake Bot <snake-bot@noreply.com>"
