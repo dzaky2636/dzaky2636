@@ -1,14 +1,13 @@
 <h1><b>Hello there, I'm </b>Dzaky Fatur Rahman <img src="https://media.giphy.com/media/hvRJCLFzcasrR4ia7z/giphy.gif" width="30"></h1>
 Lead Fullstack Engineer, Fullstack Web & Mobile Developer
 <p><small><i>- Engineering AI orchestrators and multi-tenant architectures<br>
-<!-- - Quote here</i></small></p> -->
+<!-- - Quote here</i></small></p> --></i>
 
 <h2>
   About Me
 </h2>
 
-- 🎓 I am an Informatics graduate with comprehensive experience in full-stack development, Machine Learning (AI) integration, and web architecture.
-- 💼 I currently serve as a Lead Fullstack Engineer, where I architected a multi-tenant B2B SaaS omnichannel AI chatbot platform. 
+- 💼 I have comprehensive experience in full-stack development, Machine Learning (AI) integration, and web architecture. I currently serve as a Lead Fullstack Engineer, where I architected a multi-tenant B2B SaaS omnichannel AI chatbot platform. 
 - 🤖 I engineered an anti-hallucination AI orchestrator featuring Retrieval-Augmented Generation (RAG), full sales cycle management, and an AI Business Advisor.
 - 🚀 I am proficient in both front-end and back-end environments, managing the end-to-end software development life cycle (SDLC).
 - 📫 Reach out to me at: <a href="mailto:dzaky2636@gmail.com">dzaky2636@gmail.com</a>
