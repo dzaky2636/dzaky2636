@@ -7,7 +7,7 @@ Lead Fullstack Engineer, Fullstack Web & Mobile Developer
   About Me
 </h2>
 
-- 💼 I have comprehensive experience in full-stack development, Machine Learning (AI) integration, and web architecture. I currently serve as a Lead Fullstack Engineer, where I architected a multi-tenant B2B SaaS omnichannel AI chatbot platform. 
+- 💼 I have comprehensive experience in full-stack development, Machine Learning (AI) integration, and web architecture. I served as a Lead Fullstack Engineer, where I architected a multi-tenant B2B SaaS omnichannel AI chatbot platform. 
 - 🤖 I engineered an anti-hallucination AI orchestrator featuring Retrieval-Augmented Generation (RAG), full sales cycle management, and an AI Business Advisor.
 - 🚀 I am proficient in both front-end and back-end environments, managing the end-to-end software development life cycle (SDLC).
 - 📫 Reach out to me at: <a href="mailto:dzaky2636@gmail.com">dzaky2636@gmail.com</a>
