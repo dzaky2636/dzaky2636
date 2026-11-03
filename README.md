@@ -1,5 +1,5 @@
 <h1><b>Hello there, I'm </b>Dzaky Fatur Rahman <img src="https://media.giphy.com/media/hvRJCLFzcasrR4ia7z/giphy.gif" width="30"></h1>
-Lead Fullstack Engineer, Fullstack Web & Mobile Developer
+Currently a Software Engineer; Past Lead Fullstack Engineer, Fullstack Web & Mobile Developer
 <p><small><i>- Engineering AI orchestrators and multi-tenant architectures<br>
 <!-- - Quote here</i></small></p> --></i>
 
