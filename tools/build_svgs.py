@@ -92,6 +92,21 @@ def tag(x, y, text, *, size=11, spacing=1.5, fill=WHITE, color=INK, pad=8, h=24)
         weight="bold", spacing=spacing)
 
 
+def arrow(x, y, size, direction, *, color=INK, sw=3):
+    """Drawn arrow icon (font glyphs like ↗ render tiny in Courier).
+    (x, y) is the top-left of a size×size box."""
+    s, h = size, size * 0.45
+    if direction == "ne":
+        d = (f"M{x} {y+s}L{x+s} {y}"
+             f"M{x+s-h} {y}L{x+s} {y}L{x+s} {y+h}")
+    else:  # "down"
+        cx = x + s / 2
+        d = (f"M{cx} {y}L{cx} {y+s}"
+             f"M{cx-h} {y+s-h}L{cx} {y+s}L{cx+h} {y+s-h}")
+    return (f'<path d="{d}" fill="none" stroke="{color}" stroke-width="{sw}" '
+            f'stroke-linecap="square" stroke-linejoin="miter"/>')
+
+
 def write(name, content):
     OUT.mkdir(exist_ok=True)
     (OUT / name).write_text(content, encoding="utf-8")
@@ -116,10 +131,11 @@ HEADER = {
 }
 
 BUTTONS = [
-    ("btn-portfolio.svg", "PORTFOLIO ↗", True),
-    ("btn-linkedin.svg", "LINKEDIN ↗", False),
-    ("btn-email.svg", "EMAIL ↗", False),
-    ("btn-cv.svg", "CV.PDF ↓", False),
+    # (file, label, arrow direction, primary)
+    ("btn-portfolio.svg", "PORTFOLIO", "ne", True),
+    ("btn-linkedin.svg", "LINKEDIN", "ne", False),
+    ("btn-email.svg", "EMAIL", "ne", False),
+    ("btn-cv.svg", "CV.PDF", "down", False),
 ]
 
 SECTIONS = [
@@ -139,7 +155,7 @@ PROJECTS = [
             "AI sales agent.",
         ],
         "tags": ["NESTJS", "NEXT.JS", "POSTGRES", "REDIS", "TEMPORAL"],
-        "link": "chatrigo.id ↗",
+        "link": "chatrigo.id",
     },
     {
         "file": "proj-replygo.svg", "level": "02", "exe": "REPLYGO.EXE",
@@ -151,7 +167,7 @@ PROJECTS = [
             "answers buyers before checkout.",
         ],
         "tags": ["RUST", "AXUM", "PGVECTOR", "REACT"],
-        "link": "replygo.id ↗",
+        "link": "replygo.id",
     },
     {
         "file": "proj-egov.svg", "level": "03", "exe": "EGOV_BPN.EXE",
@@ -163,7 +179,7 @@ PROJECTS = [
             "public-service app for citizens.",
         ],
         "tags": ["LARAVEL", "TAILWIND", "QUEUES", "FLUTTER"],
-        "link": "edocument.balikpapan.go.id ↗",
+        "link": "edocument.balikpapan.go.id",
     },
     {
         "file": "proj-its.svg", "level": "04", "exe": "THESIS.EXE",
@@ -174,7 +190,7 @@ PROJECTS = [
             "gamified on the Octalysis framework.",
         ],
         "tags": ["AI AGENTS", "OCTALYSIS", "EDTECH"],
-        "link": "github.com/dzaky2636 ↗",
+        "link": "github.com/dzaky2636",
     },
 ]
 
@@ -189,7 +205,6 @@ STACK = [
 ]
 HIGHLIGHT = {"TYPESCRIPT", "RUST", "RAG PIPELINES", "POSTGRESQL"}
 
-FOOTER_LEFT = "EOF ■ NO GRADIENTS. NO ROUNDED CORNERS. NO SOFT SHADOWS."
 FOOTER_RIGHT = "© 2026 DZAKY FATUR RAHMAN"
 
 
@@ -235,15 +250,19 @@ def build_header():
 
 def build_buttons():
     W, H, S = 240, 64, 6
-    for name, label, primary in BUTTONS:
+    size, spacing, icon, gap = 16, 3, 10, 10
+    for name, label, direction, primary in BUTTONS:
         fill, color = (BLUE, WHITE) if primary else (WHITE, INK)
+        text_w = mono_width(label, size, spacing) - spacing
+        x0 = (W - S - (text_w + gap + icon)) / 2
+        cy = (H - S) / 2
         inner = (
             rect(2 + S, 2 + S, W - S - 4, H - S - 4, fill=INK)
             + rect(2, 2, W - S - 4, H - S - 4, fill=fill, stroke=INK, sw=3)
-            + t((W - S) / 2, (H - S) / 2 + 6, label, size=16, fill=color,
-                weight="bold", spacing=3, anchor="middle")
+            + t(x0, cy + 6, label, size=size, fill=color, weight="bold", spacing=spacing)
+            + arrow(x0 + text_w + gap, cy + 6 - icon, icon, direction, color=color, sw=2.5)
         )
-        write(name, svg(W, H, inner, label.rstrip(" ↗↓")))
+        write(name, svg(W, H, inner, label))
 
 
 def build_sections():
@@ -276,7 +295,8 @@ def build_projects():
             w, el = tag(x, 250, name)
             parts.append(el)
             x += w + 6
-        parts.append(t(456, 298, p["link"], size=12, fill=BLUE, weight="bold", spacing=1, anchor="end"))
+        parts.append(t(442, 298, p["link"], size=12, fill=BLUE, weight="bold", spacing=1, anchor="end"))
+        parts.append(arrow(446, 288, 10, "ne", color=BLUE, sw=2))
         write(p["file"], svg(W, H, "".join(parts), f"{p['title']} — {' '.join(p['lines'])}"))
 
 
@@ -301,7 +321,6 @@ def build_footer():
     W, H = 1000, 48
     inner = (
         rect(0, 0, W, H, fill=INK)
-        + t(20, 29, FOOTER_LEFT, size=12, fill=PAPER, weight="bold", spacing=2)
         + t(W - 20, 29, FOOTER_RIGHT, size=12, fill=YELLOW, weight="bold", spacing=2, anchor="end")
     )
     write("footer.svg", svg(W, H, inner, "End of file"))
