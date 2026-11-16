@@ -1,46 +1,46 @@
-<h1><b>Hello there, I'm </b>Dzaky Fatur Rahman <img src="https://media.giphy.com/media/hvRJCLFzcasrR4ia7z/giphy.gif" width="30"></h1>
-Currently a Software Engineer; Past Lead Fullstack Engineer, Fullstack Web & Mobile Developer
-<p><small><i>- Engineering AI orchestrators and multi-tenant architectures<br>
-<!-- - Quote here</i></small></p> --></i>
+<p align="center">
+  <img src="assets/header.svg" width="100%" alt="Dzaky Fatur Rahman — Software Engineer. Fullstack, AI, multi-tenant SaaS. Based in Tangerang, Indonesia." />
+</p>
 
-<h2>
-  About Me
-</h2>
+<p align="center">
+  <a href="https://www.dzakyfatur.my.id/"><img src="assets/btn-portfolio.svg" width="24%" alt="Portfolio" /></a>
+  <a href="https://www.linkedin.com/in/dzakyfaturr/"><img src="assets/btn-linkedin.svg" width="24%" alt="LinkedIn" /></a>
+  <a href="mailto:dzaky2636@gmail.com"><img src="assets/btn-email.svg" width="24%" alt="Email" /></a>
+  <a href="https://www.dzakyfatur.my.id/cv/DzakyFaturRahman_CV.pdf"><img src="assets/btn-cv.svg" width="24%" alt="CV (PDF)" /></a>
+</p>
 
-- 💼 I have comprehensive experience in full-stack development, Machine Learning (AI) integration, and web architecture. I served as a Lead Fullstack Engineer, where I architected a multi-tenant B2B SaaS omnichannel AI chatbot platform. 
-- 🤖 I engineered an anti-hallucination AI orchestrator featuring Retrieval-Augmented Generation (RAG), full sales cycle management, and an AI Business Advisor.
-- 🚀 I am proficient in both front-end and back-end environments, managing the end-to-end software development life cycle (SDLC).
-- 📫 Reach out to me at: <a href="mailto:dzaky2636@gmail.com">dzaky2636@gmail.com</a>
+<br />
 
-<h2>
-  Skills
-</h2>
+<img src="assets/sec-about.svg" width="100%" alt="01 — About" />
 
-#### Languages & Frameworks
-<img src="https://skillicons.dev/icons?i=ts,js,qt,python,java,kotlin,flutter,c,cpp,react,next,nodejs,express,laravel,tailwind,bootstrap&perline=15" />
+I build web systems end to end: interface, API, database, and the deployment that keeps them running. Most of my work is **TypeScript** and **Rust**, with a focus on multi-tenant SaaS and retrieval-augmented AI.
 
-#### Tools & Infrastructure
-<img src="https://skillicons.dev/icons?i=docker,redis,supabase,postgres,prisma,supabase,git,github,figma,blender,godot,unity&perline=15" />
+- **Architected** Chatrigo, a multi-tenant omnichannel chatbot platform, and ReplyGo, a Rust-backed storefront, at PT Rigo Inovasi Digital, where I led architecture and code review for a team of 8.
+- **Shipped** three municipal e-government systems for Balikpapan. All are still live, one across 278 schools.
+- **Taught** Machine Learning, Algorithms & Data Structures, and Web and Mobile Programming to 200+ students as a lab assistant at Universitas Multimedia Nusantara.
+- **Studied** Computer Science at UMN, GPA 3.71.
 
-<h2>
-  Stats
-</h2>
-<br>
+<br />
 
-![GitHub Stats](https://github-readme-stats-fast.vercel.app/api/streak?username=dzaky2636&theme=radical)
-![GitHub Stats](https://github-readme-stats-fast.vercel.app/api/top-langs/?username=dzaky2636&layout=compact&theme=radical)
-<div align="center">
-  <img src="https://komarev.com/ghpvc/?username=dzaky2636&label=Profile%20views&color=0e75b6&style=flat" alt="profile views" />
-</div>
+<img src="assets/sec-projects.svg" width="100%" alt="02 — Selected Work" />
 
-<br>
+<p align="center">
+  <a href="https://www.chatrigo.id"><img src="assets/proj-chatrigo.svg" width="49%" alt="Chatrigo — multi-tenant omnichannel AI chatbot SaaS (NestJS, Next.js, PostgreSQL, Redis, Temporal)" /></a>
+  <a href="https://www.replygo.id"><img src="assets/proj-replygo.svg" width="49%" alt="ReplyGo — link-in-bio storefront with QRIS checkout and an AI assistant (Rust, Axum, pgvector, React)" /></a>
+</p>
+<p align="center">
+  <a href="https://edocument.balikpapan.go.id/"><img src="assets/proj-egov.svg" width="49%" alt="E-Gov Balikpapan — E-Sign, E-KGB and E-Manuntung, three live municipal systems (Laravel, Flutter)" /></a>
+  <a href="https://github.com/dzaky2636/adaptive-gamified-its"><img src="assets/proj-its.svg" width="49%" alt="Adaptive ITS — undergraduate thesis: intelligent tutoring system with AI agents and Octalysis gamification" /></a>
+</p>
 
-<div align="center">
-  <picture>
-    <source media="(prefers-color-scheme: dark)" srcset="dist/github-snake-dark.svg" />
-    <source media="(prefers-color-scheme: light)" srcset="dist/github-snake.svg" />
-    <img alt="github-snake" src="dist/github-snake.svg" />
-  </picture>
-</div>
+<br />
 
-<sub>generated with <a href="https://github.com/Platane/snk">Platane/snk</a></sub>
+<img src="assets/sec-stack.svg" width="100%" alt="03 — Inventory" />
+
+<p align="center">
+  <img src="assets/stack.svg" width="100%" alt="Stack — Languages: TypeScript, Rust, Go, PHP, Python, SQL. Frontend: Next.js, React, Astro, Svelte, Tailwind, Flutter. Backend: Node.js, NestJS, Axum, Laravel, Prisma, Temporal. Data: PostgreSQL, pgvector, Redis, Supabase. AI: RAG pipelines, embeddings, LLM orchestration, OpenRouter. Infra: Docker, Railway, Vercel, S3, Git." />
+</p>
+
+<br />
+
+<img src="assets/footer.svg" width="100%" alt="End of file" />
